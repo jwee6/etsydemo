@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'pages/about'
+  get 'seller' => 'listings#seller' #localhost/seller categorize seller under listings pages
 
   root 'listings#index'
 
