@@ -9,7 +9,7 @@
 		<h3><%= @listing.name %></h3>
 		<p><%= number_to_currency(@listing.price) %></p>
 		<p><%= @listing.description %></p>
-		<p><strong>Owned By: </strong></p>
+		<p><strong>Owned By: <%= @listing.user.name %></strong></p>
 	</div>
 </div>
 
