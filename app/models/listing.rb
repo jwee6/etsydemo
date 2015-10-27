@@ -12,6 +12,6 @@ class Listing < ActiveRecord::Base
 
   	validates :name, :description, :price, presence: true
   	validates :price, numericality: { greater_than: 0 }
-  	validate_attachemnet_presence :image
+  	validates_attachment_presence :image
 
 end
