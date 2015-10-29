@@ -27,6 +27,8 @@ gem 'paperclip-dropbox', '~> 1.3', '>= 1.3.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'devise'
 
+gem 'stripe'
+
 group :production do 
 	gem 'pg'
 	gem 'rails_12factor'

@@ -9,6 +9,7 @@
 		<h3><%= @listing.name %></h3>
 		<p><%= number_to_currency(@listing.price) %></p>
 		<p><%= @listing.description %></p>
+		<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
 		<p><strong>Owned By: <%= @listing.user.name %></strong></p>
 	</div>
 </div>

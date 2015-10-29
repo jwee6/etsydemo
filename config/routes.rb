@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   devise_for :users
   resources :listings
   get 'pages/contact'
@@ -6,7 +7,14 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'seller' => 'listings#seller' #localhost/seller categorize seller under listings pages
 
+  get 'sales' => 'orders#sales'
+  get 'purchases' => 'orders#purchases'
+
   root 'listings#index'
+
+  resources :listings do
+    resources :orders, only: [:new, :create]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
